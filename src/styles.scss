@@ -1,6 +1,80 @@
-@import "../node_modules/bootstrap/scss/bootstrap"; //bootstrap
+$bigPadMd: 140px;
+$bigPadSm: 20px;
+$mainFontColor: #FFFFFF;
+@import "../node_modules/bootstrap/scss/bootstrap";
 
-//@import "variables", "mixins";
+
+@mixin mainFontFamily() {
+  font-family: Georgia;
+}
+
+.top-big-pad {
+  padding-top: $bigPadSm;
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    padding-top: $bigPadMd;
+  }
+}
+
+h1, h2 {
+  @include mainFontFamily ();
+}
+
+a{
+  color: #FFFFFF;
+
+  &:hover {
+    color: #f36565;
+  }
+}
+
+header, footer {
+  background: url('../images/back.png');
+  color: $mainFontColor;
+  @include mainFontFamily ();
+  li{
+    font-size: 20px;
+  }
+  img{
+    width: 100%;
+  }
+  }
+
+.first {
+  p {
+    font-family: "Arial Rounded MT Bold";
+font-size: 20px;
+  }
+}
+.second2{
+  img{
+    width: 100%;
+  }
+}
+.second {
+  button {
+    background: #F1CDB3;
+    color: #FFFFFF;
+    &:hover{
+      color: #f36565;
+    }
+  }
+
+  img {
+    background: #F6F6F6;
+    height: 500px;
+  }
+}
+
+.third {
+  svg {
+    fill: #F1CDB3;
+    height: 100px;
+  }
 
 
+  p {
+    font-size: 17px;
+    @include mainFontFamily ();
 
+  }
+}
