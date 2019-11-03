@@ -3,6 +3,9 @@ $bigPadSm: 20px;
 $mainFontColor: #FFFFFF;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+body{
+  font-family: Georgia;
+}
 
 @mixin mainFontFamily() {
   font-family: Georgia;
@@ -77,4 +80,11 @@ font-size: 20px;
     @include mainFontFamily ();
 
   }
+}
+.Dog-name:hover{
+  border-bottom: 3px solid black;
+}
+.news {
+  height: 200px;
+  overflow: hidden;
 }
